@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: velocity-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: velocity_odds
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7.4-alpine
+    container_name: velocity-cache
+    ports:
+      - "6379:6379"
