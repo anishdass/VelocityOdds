@@ -7,7 +7,7 @@ public record MatchUpdate(
         String sport,
         String homeTeam,
         String awayTeam,
-        String homeOdds,
-        String awayOdds,
+        Double homeOdds,
+        Double awayOdds,
         Instant timestamp) {
 }
